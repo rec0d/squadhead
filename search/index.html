@@ -1,0 +1,84 @@
+<?php
+
+	include 'header.php'
+
+?>
+
+
+<form action="search.php" method="POST">
+	<input type="text" name="search" placerholder="Search">
+	<button type="submit" name="submit-search">Search</button>
+</form>
+
+<h1>Front page</h1>
+<h2>All articles:</h2>
+
+<div class="articles-container">
+	<?php
+		$sql = "SELECT * FROM article";
+		$result = mysqli_query($conn, $sql);
+		$queryResults = mysqli_num_rows($result);
+
+		if($queryResults > 0) {
+		while ($row = mysqli_fetch_assoc($result)) {
+			echo "<div class='article-box'>
+				<h3>".$row['a_title']."</h3>
+				<p>".$row['a_text']."</p>
+				<p>".$row['a_date']."</p>
+				<p>".$row['a_auther']."</p>
+			</div>";
+			}
+
+		}
+	?>
+
+</div>
+	<main>
+		<section class="index-banner">
+			<div class="vertical-center">
+			<h2></h2>
+			<h1><h1>
+			</div>
+		</section>
+		<div classs="wrapper">
+		<section class="index-links">
+			<a href="cases.html">
+				<div class="index-patch">
+				<h3>Patch</h3>
+				</div>
+			</a>
+			<a href="#">
+				<div class="index-recent">
+				<h3>Recent news</h3>
+				</div>
+			</a>
+		</section>
+	</div>
+	</main>
+	<div classs="wrapper">
+	<footer>
+		<ul class="footer-links-main">
+			<li><a href="Guides"></a></li>
+			<li><a href="Skills"></a></li>
+			<li><a href="Ranks"></a></li>
+		</ul>
+		<ul class="footer-links-cases">
+			<li><p>Recent News</p></li>
+			<li><a href="#">test</a></li>
+			<li><a href="#">test2</a></li>
+		</ul>
+		<div class="footer-sm">
+			<a href="#">
+				<img src="img/youtube-symbol-png" alt="youtube icon">
+			</a>
+			<a href="#">
+				<img src="img/youtube-symbol-png" alt="youtube icon">
+			</a>
+			<a href="#">
+				<img src="img/youtube-symbol-png" alt="youtube icon">
+			</a>
+		</div>
+	</footer>
+	</div>
+	</body>
+	<html>
