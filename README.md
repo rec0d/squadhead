@@ -36,3 +36,5 @@ Recode Database Structure
 6. reputation system
 7. Roles admin, moderator, player.
 -----------------------------------------------
+
+test
