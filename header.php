@@ -1,9 +1,16 @@
 <header>
-    <ul class="nav">
-      <li><a href="welcome.php">Logo </a></li>
-      <li><a href="skapa.php">Om oss</a></li>
-      <li><a href="boking.php">Vad vi gör</a></li>
-    </ul>
+ 			<nav>
+				
+				<ul class="topnav">
+                    <a href="index.html" class="header-brand"><img src="img/logo.png"></a>
+  					<li><a class="active" href="#home">Home</a></li>
+  					<li><a href="#ranks">Ranks</a></li>
+  					<li><a href="#maps">Maps</a></li>
+  					<li><a href="#store">Store</a></li>
+  					<li><a href="#character">Character</a></li>
+				</ul>			
+ 				
+ 			</nav>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
       $(function(){
